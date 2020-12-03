@@ -95,22 +95,28 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 <body>
 
 	<h1>Predict, Customer will take personal loan or not ?</h1>
+	
     
 <h2> Machine Learning Model <br> Random Forest</h2>
+
      <!-- Main Input For Receiving Query to our ML -->
      <div class="input_ML">
      
     <form action="{{ url_for('predict')}}"method="post">
+            <input type="text" name="Age" placeholder="Age" required="required" />
+
         <input type="text" name="Income" placeholder="Income '$000'" required="required" />
+                <input type="text" name="Family" placeholder="Family Size" required="required" />
+
         <input type="text" name="CCAvg" placeholder="Credit Card Avg. '$000'" required="required" />
-        <input type="text" name="CD Account" placeholder="CD Account '0/1'" required="required" />
-        <input type="text" name="Education" placeholder="Education '1/2/3'" required="required" />
-        <input type="text" name="Mortgage_INT" placeholder="Mortgage '0/1'" required="required" />
-        <input type="text" name="Family" placeholder="Family Size" required="required" />
-        <input type="text" name="Credit Card" placeholder="Credit Card '0/1'" required="required" />
-        <input type="text" name="Age" placeholder="Age" required="required" />
-        <input type="text" name="Netbanking" placeholder="Netbanking '0/1'" required="required" />
+                <input type="text" name="Education" placeholder="Education '1/2/3'" required="required" />
         <input type="text" name="Securities Account" placeholder="Securities Account '0/1'" required="required" />
+
+        <input type="text" name="CD Account" placeholder="CD Account '0/1'" required="required" />
+                <input type="text" name="Online" placeholder="Netbanking '0/1'" required="required" />
+        <input type="text" name="CreditCard" placeholder="Credit Card '0/1'" required="required" />
+
+        <input type="text" name="Mortgage_INT" placeholder="Mortgage '0/1'" required="required" />
 <!--Age	Income	Family	CCAvg	Education	Securities Account	CD Account	Online	CreditCard	Mortgage_INT-->
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
@@ -123,7 +129,6 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
    
 
 </body>
-	
 </html>
 
 
