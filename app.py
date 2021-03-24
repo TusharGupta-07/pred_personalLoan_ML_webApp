@@ -19,7 +19,7 @@ def predict():
     #model.predict_proba(test)[:,1]
 
 
-    output = round(prediction[0], 2)
+    output = round(prediction[0], 1)
     return render_template('index.html', prediction_text='Predicted value of customer is : {}'.format(output))
 
 
