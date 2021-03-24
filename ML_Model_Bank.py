@@ -854,8 +854,8 @@ print("Accuracy for test data : {:.4f} ".format(accuracy_score_3_test_x))
 
 from sklearn.ensemble import RandomForestRegressor
 
-#randomforest_model = RandomForestClassifier(max_depth=2, random_state=0)
-randomforest_model = RandomForestRegressor(n_estimators=20, random_state=0)
+randomforest_model = RandomForestClassifier(max_depth=2, random_state=0)
+#randomforest_model = RandomForestRegressor(n_estimators=20, random_state=0)
 
 randomforest_model.fit(np_train_x, np_train_y)
 
